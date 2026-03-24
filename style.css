@@ -338,6 +338,38 @@ html[dir="ltr"] .nav-list a::after {
   box-shadow: 0 0 20px var(--primary-glow);
 }
 
+/* Theme Toggle Enhancement */
+.theme-toggle {
+  background: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: var(--transition);
+  margin-right: 15px;
+  box-shadow: 0 0 15px var(--primary-glow);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.theme-toggle:hover {
+  background: var(--white);
+  color: var(--primary-color);
+  transform: rotate(15deg) scale(1.1);
+  box-shadow: 0 0 25px var(--primary-glow);
+}
+
+.navbar.scrolled .theme-toggle {
+  background: var(--bg-color);
+  border-color: var(--primary-color);
+}
+
 .mobile-menu-btn {
   display: none;
   background: transparent;
@@ -553,6 +585,11 @@ html[dir="ltr"] .mobile-link:hover {
 /* =========================================
    About Section
 ========================================= */
+#about {
+  overflow: hidden;
+  position: relative;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -640,10 +677,16 @@ html[dir="ltr"] .experience-badge {
 /* =========================================
    Courses Section
 ========================================= */
+#courses {
+  overflow: hidden;
+  position: relative;
+}
+
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: clamp(20px, 4vw, 30px);
+  overflow: visible;
 }
 
 .course-card {
